@@ -1,0 +1,15 @@
+.card{
+    margin: 2rem 2rem;
+    width: 16rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+.person-form{
+    display: none;
+}
+.edit{
+    max-width: 2.5rem;
+}

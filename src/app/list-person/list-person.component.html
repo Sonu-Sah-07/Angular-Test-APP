@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="container-fluid">
+        <div class="grid-container grid-item">
+            <div class="card" *ngFor="let persons of personData; let i=index">
+                <img src="{{persons.avatar}}" class="card-img-top" alt="...">
+                <div class="card-body row">
+                    <div class="col"><h5 class="card-title">{{persons.name}}</h5></div>
+                    <div class="col edit"><img class="edit" src="../../assets/Image/edit (2).svg" (click)="edit(i)"></div>
+                    
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Email : {{persons.email}}</li>
+                    <li class="list-group-item">Age : {{persons.dob | age}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

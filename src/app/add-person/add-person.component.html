@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="container-fluid">
+        <form [formGroup]="personForm" (ngSubmit)="submitForm()" class="person">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                <span class="danger" *ngIf="!personFormControl['name'].valid && personFormControl['name'].touched">Name is required</span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                <span class="danger" *ngIf="!personFormControl['email'].valid && personFormControl['email'].touched">Email is required</span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
+                <input type="text" class="form-control" formControlName="dob" placeholder="Date Of Birth">
+                <span class="danger" *ngIf="!personFormControl['dob'].valid && personFormControl['dob'].touched">Date of Birth is required</span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Country</label>
+                <input type="text" class="form-control" formControlName="country" placeholder="Country">
+                <span class="danger" *ngIf="!personFormControl['country'].valid && personFormControl['country'].touched">Country is required</span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Avatar</label>
+                <input type="text" class="form-control" formControlName="avatar" placeholder="Avatar">
+                <span class="danger" *ngIf="!personFormControl['avatar'].valid && personFormControl['avatar'].touched">Avtar is required</span>
+            </div>
+            <button type="submit" [disabled]="!personForm.valid" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
